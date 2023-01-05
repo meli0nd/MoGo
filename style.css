@@ -11,10 +11,9 @@
     width: 100%;
     height: 100vh;
 }
-/* NAVIGATION */
 
 .header_container {
-    padding: 30px 360px 230px 360px;
+    padding: 30px 360px 150px 360px;
 }
 
 .nav_container {
@@ -100,8 +99,6 @@
     cursor: pointer;
 }
 
-/* MAIN SECTION */
-
 .main_container {
     display: flex;
     flex-direction: column;
@@ -147,7 +144,7 @@
     color: orange;
 }
 
-/* HEADER ADAPTATION */
+                /* HEADER ADAPTATION */
 
 @media (max-width: 1600px) {
     .header_container {
@@ -167,12 +164,22 @@
         margin-left: 15%;
     }
 }
+
+@media (max-width: 1025px) {
+    
+}
+
 @media (max-width: 999px) {
     .header_container {
         padding: 30px 80px 100px 80px;
     }
     .navigation {
         margin-left: 10%;
+    }
+}
+@media (max-width: 821px) {
+    .welcome_text {
+        font-size: 100px;
     }
 }
 @media (max-width: 768px) {
@@ -189,22 +196,22 @@
     .welcome_text {
         font-size: 100px;
     }
-}
-@media (max-width: 426px) {
+    .navigation, .cart-icon, .glass-icon {
+        display: none;
+    }
+    .header_logo {
+        font-size: 52px;
+    }
     .header_container {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-self: center;
+        align-items: center;
     }
-    .navigation, .cart-icon, .glass-icon {
-        display: none;
-    }
+}
+@media (max-width: 426px) {
     .nav_container {
         justify-content: center;
-    }
-    .header_logo {
-        font-size: 52px;
     }
     .main_heading {
         font-size: 32px;
@@ -218,6 +225,11 @@
         align-items: center;
     }
 } 
+@media (max-width: 376px) {
+    .header_container {
+        display: block;
+    }
+}
 @media (max-width: 321px) {
     .main_heading {
         font-size: 28px;
@@ -227,4 +239,129 @@
     }
 }
 
+
+                        /* ABOUT US  */
+
+.aboutus {
+    width: 100%;
+    height: auto;
+}
+
+.aboutus_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 360px 120px 360px;
+}
+
+.aboutus_title {
+    font-family: 'Kaushan Script';
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.aboutus_subtitle {
+    font-size: 30px;
+    font-weight: 800;
+    font-family: 'Montserrat';
+    color: #333333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.aboutus_line {
+    width: 7%;
+    border-bottom: 3px solid #f38181;
+    margin-bottom: 40px;
+}
+
+.aboutus_text {
+    font-weight: lighter;
+    font-size: 15px;
+    color: #999999;
+    font-family: 'Cocon-Regular';
+    margin-bottom: 100px;
+}
+
+.aboutus_image_container {
+    display: flex;
+}
+
+.aboutus_image-1, .aboutus_image-2, .aboutus_image-3 {
+    transition: .4s;
+    margin-right: 30px;
+}
+
+.aboutus_image-1:hover {
+    transform: translate(-25px, -10px);
+    box-shadow: 26px 10px 0px 1px rgba(149, 225, 211, 1);
+}
+.aboutus_image-2:hover {
+    transform: scale(1.05);
+}
+.aboutus_image-3:hover {
+    transform: translate(25px, -10px);
+    box-shadow: -26px 10px 0px 1px rgba(149, 225, 211, 1);
+}
+
+            /* ABOUT US ADAPTATION */
+
+@media (max-width: 1250px) {
+    .aboutus_container {
+        padding: 100px 100px 120px 100px;
+    }
+    .aboutus_image-1, .aboutus_image-2, .aboutus_image-3 {
+        width: 30%;
+    }
+}
+
+@media (max-width: 999px) {
+    .aboutus_title {
+        font-size: 50px;
+    }
+    .aboutus_subtitle {
+        font-size: 50px;
+    }
+    .aboutus_text {
+        font-size: 20px;
+    }
+    .aboutus_line {
+        width: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutus_image_container {
+        flex-direction: column;
+    }
+    .aboutus_image-1, .aboutus_image-2, .aboutus_image-3 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 425px) {
+    .aboutus_container {
+        padding: 100px 10px 120px 10px;
+    }
+    .aboutus_image-1, .aboutus_image-2, .aboutus_image-3 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .aboutus_title {
+        font-size: 30px;
+    }
+    .aboutus_subtitle {
+        font-size: 30px;
+    }
+    .aboutus_text {
+        font-size: 20px;
+    }
+    .aboutus_line {
+        width: 10%;
+    }
+}
 
